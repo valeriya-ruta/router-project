@@ -1,0 +1,28 @@
+{
+  "rewrites": [
+    {
+      "source": "/storytelling/:path*",
+      "destination": "https://story-builder-fawn.vercel.app/:path*"
+    },
+    {
+      "source": "/storytelling",
+      "destination": "https://story-builder-fawn.vercel.app/"
+    },
+    {
+      "source": "/tg-format/:path*",
+      "destination": "https://tg-format.vercel.app/:path*"
+    },
+    {
+      "source": "/tg-format",
+      "destination": "https://tg-format.vercel.app/"
+    },
+    {
+      "source": "/calculator/:path*",
+      "destination": "https://launch-calculator.vercel.app/:path*"
+    },
+    {
+      "source": "/calculator",
+      "destination": "https://launch-calculator.vercel.app/"
+    }
+  ]
+}
