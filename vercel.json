@@ -1,12 +1,12 @@
 {
   "rewrites": [
     {
-      "source": "/storytelling/:path*",
-      "destination": "https://story-builder-fawn.vercel.app/:path*"
-    },
-    {
       "source": "/storytelling",
       "destination": "https://story-builder-fawn.vercel.app/"
+    },
+    {
+      "source": "/storytelling/:path*",
+      "destination": "https://story-builder-fawn.vercel.app/:path*"
     },
     {
       "source": "/tg-format/:path*",
