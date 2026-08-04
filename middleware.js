@@ -3,9 +3,10 @@ export default async function middleware(request) {
   const path = url.pathname;
   
   // Only process our proxied routes
-  if (path.startsWith('/storytelling') || 
-      path.startsWith('/tg-format') || 
-      path.startsWith('/calculator')) {
+  if (path.startsWith('/storytelling') ||
+      path.startsWith('/tg-format') ||
+      path.startsWith('/calculator') ||
+      path.startsWith('/vibeform')) {
     
     let destination;
     let basePath;
@@ -22,6 +23,11 @@ export default async function middleware(request) {
       basePath = '/calculator';
       const targetPath = path.replace('/calculator', '') || '/';
       destination = `https://launch-calculator.vercel.app${targetPath}`;
+    } else if (path.startsWith('/vibeform')) {
+      basePath = '/vibeform';
+      const targetPath = path.replace('/vibeform', '') || '/';
+      // Keep the query string — the form app uses ?token=, ?order=, ?paid=1.
+      destination = `https://form-guide-six.vercel.app${targetPath}${url.search}`;
     }
     
     if (destination) {
