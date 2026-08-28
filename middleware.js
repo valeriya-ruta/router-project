@@ -6,6 +6,7 @@ export default async function middleware(request) {
   if (path.startsWith('/storytelling') ||
       path.startsWith('/tg-format') ||
       path.startsWith('/calculator') ||
+      path.startsWith('/postbot-buttons') ||
       path.startsWith('/vibeform')) {
     
     let destination;
@@ -23,6 +24,10 @@ export default async function middleware(request) {
       basePath = '/calculator';
       const targetPath = path.replace('/calculator', '') || '/';
       destination = `https://launch-calculator.vercel.app${targetPath}`;
+    } else if (path.startsWith('/postbot-buttons')) {
+      basePath = '/postbot-buttons';
+      const targetPath = path.replace('/postbot-buttons', '') || '/';
+      destination = `https://postbot-buttons.vercel.app${targetPath}`;
     } else if (path.startsWith('/vibeform')) {
       basePath = '/vibeform';
       const targetPath = path.replace('/vibeform', '') || '/';

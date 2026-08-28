@@ -23,6 +23,14 @@
     {
       "source": "/calculator",
       "destination": "https://launch-calculator.vercel.app/"
+    },
+    {
+      "source": "/postbot-buttons/:path*",
+      "destination": "https://postbot-buttons.vercel.app/:path*"
+    },
+    {
+      "source": "/postbot-buttons",
+      "destination": "https://postbot-buttons.vercel.app/"
     }
   ]
 }
